@@ -1,2 +1,2 @@
-#8086-simulator
+# 8086-simulator
 ## Mój pierwszy projekt
