@@ -1,0 +1,15 @@
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/bin/Debug/net6.0/8086-simulator
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/bin/Debug/net6.0/8086-simulator.deps.json
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/bin/Debug/net6.0/8086-simulator.runtimeconfig.json
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/bin/Debug/net6.0/8086-simulator.dll
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/bin/Debug/net6.0/8086-simulator.pdb
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.csproj.AssemblyReference.cache
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.AssemblyInfoInputs.cache
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.AssemblyInfo.cs
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.csproj.CoreCompileInputs.cache
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.dll
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/refint/8086-simulator.dll
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.pdb
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/8086-simulator.genruntimeconfig.cache
+/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/Debug/net6.0/ref/8086-simulator.dll

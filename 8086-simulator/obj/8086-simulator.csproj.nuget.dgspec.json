@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\8086-simulator.csproj": {}
+    "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/8086-simulator.csproj": {}
   },
   "projects": {
-    "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\8086-simulator.csproj": {
+    "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/8086-simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\8086-simulator.csproj",
+        "projectUniqueName": "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/8086-simulator.csproj",
         "projectName": "8086-simulator",
-        "projectPath": "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\8086-simulator.csproj",
-        "packagesPath": "D:\\Users\\oskar.brozda\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\obj\\",
+        "projectPath": "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/8086-simulator.csproj",
+        "packagesPath": "/Users/oskarbrozda/.nuget/packages/",
+        "outputPath": "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\oskar.brozda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/oskarbrozda/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("OMG");
+﻿using System;
+
+namespace e8086
+{
+    class Emulator
+    {
+        public static void Main(String[] args)
+        {
+
+        }
+    }
+
+}

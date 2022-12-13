@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WddcMuN5PxDa/XoCWd0t+Pivd5AE0zabdfJZ96smwrF6UA+oMVF7GmOPDi4xewldeUKuO+xZTS5L4Dkhez/EUw==",
+  "dgSpecHash": "sPXU96wYuBj0zreRlxMz1RvOr8yULBtv87q2dYKntkWbfccR9zTbnSRuz3EcQesprS1TzOxLwm3Jja14dGneMg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\oskar.brozda\\source\\repos\\8086-simulator\\8086-simulator\\8086-simulator.csproj",
+  "projectFilePath": "/Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/8086-simulator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
