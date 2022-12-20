@@ -14,10 +14,11 @@ namespace e8086
             Console.WriteLine("Welcome to Intel 8086 simple emulator!");
 
         start:
-            Console.WriteLine("Please select an option: \n set, \n move, \n add, \n substring, \n clear, \n print. \n");
+            Console.WriteLine("Please select an option: \n set, \n move, \n add, \n substring, \n clear, \n print.");
             Console.Write("Your select: ");
 
             string choice = Console.ReadLine();
+            Console.WriteLine();
 
             Background Y = new Background();
             if (choice.Contains("set")) Y.Set();
@@ -28,7 +29,7 @@ namespace e8086
             else if (choice.Contains("print")) Y.Print();
             else Console.WriteLine("Select an correct option.");
 
-            Console.WriteLine("\n \n");            
+            Console.WriteLine("\n");            
             goto start;
         }
     }
@@ -55,7 +56,7 @@ namespace e8086
         public void Set()
         {
         O1:
-            Console.Write("Select register: 16bit or 8bit. ");
+            Console.Write("Select register: 16bit or 8bit: ");
             string a = Console.ReadLine();
 
             if (a.Contains("16"))
@@ -133,7 +134,7 @@ namespace e8086
         public void Mov()
         {
         O2:
-            Console.Write("Select register: 16bit or 8bit. ");
+            Console.Write("Select register: 16bit or 8bit: ");
             string a = Console.ReadLine();
 
             if (a.Contains("16"))
@@ -290,7 +291,7 @@ namespace e8086
         public void Add()
         {
         O3:
-            Console.Write("Select register: 16bit or 8bit. ");
+            Console.Write("Select register: 16bit or 8bit: ");
             string a = Console.ReadLine();
 
             if (a.Contains("16"))
@@ -365,7 +366,7 @@ namespace e8086
         public void Substring()
         {
         O4:
-            Console.Write("Select register: 16bit or 8bit. ");
+            Console.Write("Select register: 16bit or 8bit: ");
             string a = Console.ReadLine();
 
             if (a.Contains("16"))
