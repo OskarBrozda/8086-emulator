@@ -535,19 +535,26 @@ DX: {DX_d}    {DX_h}      DH: {DH}   DL: {DL}");
         }
 
 
-        public string Hex_sum(string a, string b) //dodaje 2 liczby hexadecymalne
+        public string Hex_sum(string aS, string bS) //dodaje 2 liczby hexadecymalne
         {
-
-
-            string k = "";
+            int aI = HexToDec(string aS);
+            int bI = HexToDec(string bS);
+            string k = Convert.ToInt32((aI + bI).ToString(), 16).ToString();
             return k;
         }
 
-        public string Hex_minus(string a, string b) //odejmuje 2 liczby hexadecymalne
+        public string Hex_minus(string aS, string bS) //odejmuje 2 liczby hexadecymalne
+        {
+            int aI = HexToDec(string aS);
+            int bI = HexToDec(string bS);
+            string k = Convert.ToInt32((aI - bI).ToString(), 16).ToString();
+            return k;
+        }
+
+        public int HexToDec(string a)  //konwertuje z hexadecymalnego na dziesiętny
         {
 
-
-            string k = "";
+            int k = 0;
             return k;
         }
     }
