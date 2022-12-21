@@ -7,10 +7,8 @@ namespace e8086
 
     {
         public static void Main(String[] args)
-        {
-            
-
-            //przywitanie
+        {           
+            //welcome
             Console.WriteLine("Welcome to Intel 8086 simple emulator!");
 
         start:
@@ -20,7 +18,7 @@ namespace e8086
             string choice = Console.ReadLine();
             Console.WriteLine();
 
-            Background Y = new Background();
+            Background Y = new Background();            
             if (choice.Contains("set")) Y.Set();
             else if (choice.Contains("mov")) Y.Mov();
             else if (choice.Contains("add")) Y.Add();
@@ -34,24 +32,24 @@ namespace e8086
         }
     }
 
-    
+
     class Background
     {
 
-        static string AX_h = "0";
-        static string BX_h = "0";
-        static string CX_h = "0";
-        static string DX_h = "0";
-        static string AH = "0";
-        static string BH = "0";
-        static string CH = "0";
-        static string DH = "0";
-        static string AL = "0";
-        static string BL = "0";
-        static string CL = "0";
-        static string DL = "0";
+        private static string AX_h = "0";
+        private static string BX_h = "0";
+        private static string CX_h = "0";
+        private static string DX_h = "0";
+        private static string AH = "0";
+        private static string BH = "0";
+        private static string CH = "0";
+        private static string DH = "0";
+        private static string AL = "0";
+        private static string BL = "0";
+        private static string CL = "0";
+        private static string DL = "0";
 
-        
+
 
         public void Set()
         {
@@ -76,7 +74,7 @@ namespace e8086
                 } while (!value.All("0123456789abcdefABCDEF".Contains) || value.Length > 4);
 
                 if (b.Contains("ax")) AX_h = value;
-                else if (b.Contains("bx")) BX_h = value; 
+                else if (b.Contains("bx")) BX_h = value;
                 else if (b.Contains("cx")) CX_h = value;
                 else if (b.Contains("dx")) DX_h = value;
                 else
@@ -86,7 +84,7 @@ namespace e8086
                 }
                 Add0_16();
                 Update8bit();
-                
+
 
             }
             else if (a.Contains("8"))
@@ -105,11 +103,11 @@ namespace e8086
                     }
                 } while (!value.All("0123456789abcdefABCDEF".Contains) || value.Length > 2);
 
-                if      (b.Contains("ah")) AH = value;
+                if (b.Contains("ah")) AH = value;
                 else if (b.Contains("al")) AL = value;
                 else if (b.Contains("bh")) BH = value;
                 else if (b.Contains("bl")) BL = value;
-                else if (b.Contains("ch")) CH = value; 
+                else if (b.Contains("ch")) CH = value;
                 else if (b.Contains("cl")) CL = value;
                 else if (b.Contains("dh")) DH = value;
                 else if (b.Contains("dl")) DL = value;
@@ -120,8 +118,8 @@ namespace e8086
                 }
                 Add0_8();
                 Update16bit();
-                
-                
+
+
             }
             else
             {
@@ -283,8 +281,8 @@ namespace e8086
                     goto O22;
                 }
                 Add0_8();
-                Update16bit();   
-            }           
+                Update16bit();
+            }
         }
 
 
@@ -310,7 +308,7 @@ namespace e8086
                     }
                 } while (!value.All("0123456789abcdefABCDEF".Contains) || value.Length > 4);
 
-                if (b.Contains("ax")) AX_h = Hex_sum(AX_h, value);//((int.Parse(AX_h) + int.Parse(value)).ToString());
+                if (b.Contains("ax")) AX_h = Hex_sum(AX_h, value);
                 else if (b.Contains("bx")) BX_h = Hex_sum(BX_h, value);
                 else if (b.Contains("cx")) CX_h = Hex_sum(CX_h, value);
                 else if (b.Contains("dx")) DX_h = Hex_sum(DX_h, value);
@@ -385,7 +383,7 @@ namespace e8086
                     }
                 } while (!value.All("0123456789abcdefABCDEF".Contains) || value.Length > 4);
 
-                if (b.Contains("ax")) AX_h = Hex_minus(AX_h, value);//((int.Parse(AX_h) + int.Parse(value)).ToString());
+                if (b.Contains("ax")) AX_h = Hex_minus(AX_h, value);
                 else if (b.Contains("bx")) BX_h = Hex_minus(BX_h, value);
                 else if (b.Contains("cx")) CX_h = Hex_minus(CX_h, value);
                 else if (b.Contains("dx")) DX_h = Hex_minus(DX_h, value);
@@ -463,7 +461,7 @@ namespace e8086
             string DX_d = Add0_16_dec(Convert.ToInt32(DX_h, 16).ToString());
             Add0_8();
             Add0_16();
-            
+
             Console.WriteLine($@"       16 bit                8 bit
 AX: {AX_d}    {AX_h}      AH: {AH}   AL: {AL}
 BX: {BX_d}    {BX_h}      BH: {BH}   BL: {BL}
@@ -473,8 +471,8 @@ DX: {DX_d}    {DX_h}      DH: {DH}   DL: {DL}");
 
 
 
-        //funkcje uzupełniające
-        public void Add0_16()  //dodajemy zera 16-bit (4 miejsca)
+        //complementary functions
+        private void Add0_16()  //add "0" to 16-bit (4 places)
         {
             while (AX_h.Length + BX_h.Length + CX_h.Length + DX_h.Length < 16)
             {
@@ -486,16 +484,16 @@ DX: {DX_d}    {DX_h}      DH: {DH}   DL: {DL}");
         }
 
 
-        public string Add0_16_dec(string number)  // dodajemy zera 16-bit do liczb dziesiętnych (5 miejsc)
+        private string Add0_16_dec(string number)  //add "0" to 16-bit decimal numbers (5 places)
         {
             while (number.Length < 5) number = "0" + number;
             return number;
         }
 
 
-        public void Add0_8() //dodajemy zera 8-bit (2 miejsca)
+        private void Add0_8() //add "0" to 8-bit (2 places)
         {
-            while (AH.Length + AL.Length + BH.Length + BL.Length + CH.Length + CL.Length+ DH.Length + DL.Length < 16)
+            while (AH.Length + AL.Length + BH.Length + BL.Length + CH.Length + CL.Length + DH.Length + DL.Length < 16)
             {
                 while (AH.Length < 2) AH = "0" + AH;
                 while (AL.Length < 2) AL = "0" + AL;
@@ -510,16 +508,16 @@ DX: {DX_d}    {DX_h}      DH: {DH}   DL: {DL}");
         }
 
 
-        public void Update16bit() // aktualizujemy rejestr 16 bitowy
+        private void Update16bit() //update 16-bit register
         {
             AX_h = AH + AL;
             BX_h = BH + BL;
             CX_h = CH + CL;
-            DX_h = DH + DL;            
-        } 
+            DX_h = DH + DL;
+        }
 
 
-        public void Update8bit() // aktualizujemy rejestr 8 bitowy
+        private void Update8bit() //update 8-bit register
         {
             AH = AX_h.Substring(0, 2);
             AL = AX_h.Substring(2, 2);
@@ -531,31 +529,41 @@ DX: {DX_d}    {DX_h}      DH: {DH}   DL: {DL}");
             CL = CX_h.Substring(2, 2);
 
             DH = DX_h.Substring(0, 2);
-            DL = DX_h.Substring(2, 2);            
+            DL = DX_h.Substring(2, 2);
         }
 
 
-        public string Hex_sum(string aS, string bS) //dodaje 2 liczby hexadecymalne
+        private string Hex_sum(string aS, string bS) //add 2 hex numbers
         {
-            int aI = HexToDec(string aS);
-            int bI = HexToDec(string bS);
-            string k = Convert.ToInt32((aI + bI).ToString(), 16).ToString();
+            int aI = Convert.ToInt32(aS, 16);
+            int bI = Convert.ToInt32(bS, 16);
+            string k = convertTo16(aI + bI);
             return k;
         }
 
-        public string Hex_minus(string aS, string bS) //odejmuje 2 liczby hexadecymalne
+
+        private string Hex_minus(string aS, string bS) //substract 2 hex numbers
         {
-            int aI = HexToDec(string aS);
-            int bI = HexToDec(string bS);
-            string k = Convert.ToInt32((aI - bI).ToString(), 16).ToString();
+            int aI = Convert.ToInt32(aS, 16);
+            int bI = Convert.ToInt32(bS, 16);
+            string k = convertTo16(aI - bI);
             return k;
         }
 
-        public int HexToDec(string a)  //konwertuje z hexadecymalnego na dziesiętny
+        
+        private static string convertTo16(int k) //convert to hex
         {
+            string pattern = "0123456789ABCDEF";
+            string result = "";
 
-            int k = 0;
-            return k;
+            if (k == 0) return "0";
+
+            while (k > 0)
+            {
+                result = pattern[k % 16] + result;
+                k /= 16;
+            }
+            return result;
         }
     }
 }

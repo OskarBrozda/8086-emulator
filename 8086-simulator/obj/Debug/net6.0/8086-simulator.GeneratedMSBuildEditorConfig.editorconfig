@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _8086_simulator
-build_property.ProjectDir = C:\Users\zuzan\Source\Repos\OskarBrozda\8086-simulator\8086-simulator\
+build_property.ProjectDir = /Users/oskarbrozda/GitHub/8086-simulator/8086-simulator/
